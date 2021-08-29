@@ -30,7 +30,8 @@
  - Built In LSP Support
  - Telescope Fuzzy finder
  - Install preffered LSP using LspInstall command
-   ```LspInstall <language>```
+   ```:LspInstall <language>```
+   _eg -> :LspInstall typescript_
  - Formatting for files can be added using Format.nvim
    _Already available support for Prettier (Javascript, Typescript)_
  - AutoFormat on save for Javascript, Typescript, JSON and Lua (_More can be easily added_)
