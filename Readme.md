@@ -3,7 +3,7 @@
  _Simple Neovim Config with built in support for **LSP**, **Formatting** and **Eslint Integration** for Javascript and Typescript **(Other languages also supported)**_
 
 ## 🟢 Installing RokVim
- - You need to install NeoVim (Version 0.5 or Newer)
+ - You need to install NeoVim (**Version 0.5 or Newer**)
 
    _Find the Installation Instructions Here_
 
