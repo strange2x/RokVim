@@ -1,4 +1,4 @@
-# RokVim
+# RokVim 🖥️ ⌨️
 
  _Simple Neovim Config with built in support for **LSP**, **Formatting** and **Eslint Integration** for Javascript and Typescript **(Other languages also supported)**_
 
