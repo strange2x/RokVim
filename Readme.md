@@ -33,7 +33,7 @@
  - To enable Typescript and Javascript support install typescript and typescript-language-server
 
    ```
-   sudo npm install -g typescript typescript-language-server\
+   sudo npm install -g typescript typescript-language-server
    ```
 
  - To enable LUA formatting install lua-fmt (_**Recommended**_)
