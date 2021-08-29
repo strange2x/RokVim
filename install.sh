@@ -19,7 +19,7 @@ then
 fi
 
 echo "Cloning RokVim";
-git clone https://github.com/abeeskhan/RokVim ~/.config/nvim;
+git clone https://github.com/strange2x/RokVim.git ~/.config/nvim;
 
 echo "Please run nvim and do a PackerInstall to install all the extensions.. If packer is not installed, then you can get the command from Readme in RokVim Repo. Thanks for trying out";
 

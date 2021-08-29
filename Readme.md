@@ -12,7 +12,7 @@
 
  - You can install RokVim by running the following command
 
-   ```bash <(curl -s https://raw.githubusercontent.com/abeeskhan/RokVim/main/install.sh)```
+   ```bash <(curl -s https://raw.githubusercontent.com/strange2x/RokVim/main/install.sh)```
 
  - To Enable diagnostics, you can install diagnostic-languageserver
 
