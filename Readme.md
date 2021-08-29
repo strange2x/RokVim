@@ -4,6 +4,10 @@
 
 ## 🟢 Installing RokVim
  - You need to install NeoVim (Version 0.5 or Newer)
+   _Find the Installation Instructions Here_
+
+   ```https://github.com/neovim/neovim/wiki/Building-Neovim```
+
  - Install Packer.nvim (Package Manager user)
   
    ```
