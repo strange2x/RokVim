@@ -62,6 +62,6 @@
  - NvimTree for File navigation 
 
 
-### 😊 Thank You Note
+## 😊 Thank You Note
  Thanks for trying out RokVim ❤️.. Feel free to add your features and PRs.. Lets build a cool IDE.. 
 
