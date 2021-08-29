@@ -5,4 +5,5 @@
 ## Installing RokVim
  - You need to install NeoVim (Version 0.5 or Newer)
  - You can install RokVim by running the following command
+
    ```bash <(curl -s https://raw.githubusercontent.com/abeeskhan/RokVim/main/install.sh)```
