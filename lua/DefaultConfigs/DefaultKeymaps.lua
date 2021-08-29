@@ -1,9 +1,9 @@
 local map = vim.api.nvim_set_keymap
 local options = {silent = true, noremap = true}
 local VIM_MODES = {
-    Normal = "n",
-    Visual = "v",
-    Insert = "i"
+  Normal = "n",
+  Visual = "v",
+  Insert = "i"
 }
 
 -- Remapping window navigation
@@ -18,4 +18,3 @@ map(VIM_MODES.Normal, "<leader>,", "<cmd>bp<CR>", options)
 
 -- Closing a buffer
 map(VIM_MODES.Normal, "<leader>q", "<cmd>bd<CR>", options)
-

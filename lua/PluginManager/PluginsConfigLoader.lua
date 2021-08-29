@@ -1,18 +1,18 @@
-require("Catppuccino");
+require("Catppuccino")
 --
 -- Enable NVIMTree Configs
-require("KeyboardMappings/NVIMTreeKeyMappings");
-require("PluginManager/NVIMTreeConfigs");
+require("KeyboardMappings/NVIMTreeKeyMappings")
+require("PluginManager/NVIMTreeConfigs")
 
 -- Enable Telescope Configs
-require("KeyboardMappings/TelescopeKeyMappings");
-require("PluginManager/TelescopeConfigs");
+require("KeyboardMappings/TelescopeKeyMappings")
+require("PluginManager/TelescopeConfigs")
 
 -- Enable LuaLine
-require("PluginManager/LuaLine");
+require("PluginManager/LuaLine")
 
 -- Enable Format
-require("PluginManager/FormatConfigs");
+require("PluginManager/FormatConfigs")
 
 -- Enable Autopairs
-require("PluginManager/AutoPairsConfigs");
+require("PluginManager/AutoPairsConfigs")
