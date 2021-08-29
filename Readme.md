@@ -42,9 +42,9 @@
  - Diagnostics for LSP
  - Catppuccino theme installed with LSP and NVIMTree integration
  - Lualine as the status line
+ - NvimTree for File navigation 
+
 
 ### Thank You Note
  Thanks for trying out RokVim.. Feel free to add your features and PRs.. Lets build a cool IDE.. 
 
-
- - NvimTree for File navigation 
