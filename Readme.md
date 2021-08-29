@@ -2,7 +2,7 @@
 
  _Simple Neovim Config with built in support for **LSP**, **Formatting** and **Eslint Integration** for Javascript and Typescript **(Other languages also supported)**_
 
-## Installing RokVim
+## 🟢 Installing RokVim
  - You need to install NeoVim (Version 0.5 or Newer)
  - Install Packer.nvim (Package Manager user)
   
@@ -26,7 +26,7 @@
 
    ```sudo npm install -g lua-fmt```
 
-## Available functionalities
+## 🔵 Available functionalities
  - Built In LSP Support
  - Telescope Fuzzy finder
  - Install preffered LSP using LspInstall command
@@ -46,6 +46,6 @@
  - NvimTree for File navigation 
 
 
-### Thank You Note
- Thanks for trying out RokVim.. Feel free to add your features and PRs.. Lets build a cool IDE.. 
+### 😊 Thank You Note
+ Thanks for trying out RokVim ❤️.. Feel free to add your features and PRs.. Lets build a cool IDE.. 
 
