@@ -12,10 +12,7 @@ function InstallMiscPlugins(use)
   use "tpope/vim-surround"
   use "tpope/vim-commentary"
   use "windwp/nvim-autopairs"
-  use {
-    "creativenull/diagnosticls-configs-nvim",
-    requires = {"neovim/nvim-lspconfig"}
-  }
+  use {"creativenull/diagnosticls-configs-nvim", requires = {"neovim/nvim-lspconfig"}}
 end
 
 function InstallPlugins(use)

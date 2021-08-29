@@ -1,5 +1,9 @@
+-- Load the theme
 require("Catppuccino")
---
+
+-- Load the LSP
+require("LspSetup")
+
 -- Enable NVIMTree Configs
 require("KeyboardMappings/NVIMTreeKeyMappings")
 require("PluginManager/NVIMTreeConfigs")
