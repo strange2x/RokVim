@@ -13,3 +13,28 @@
  - You can install RokVim by running the following command
 
    ```bash <(curl -s https://raw.githubusercontent.com/abeeskhan/RokVim/main/install.sh)```
+
+ - To Enable diagnostics, you can install diagnostic-languageserver
+   ```sudo npm install -g diagnostic-languageserver```
+
+ - To enable Typescript and Javascript support install typescript and typescript-language-server
+   ```sudo npm install -g typescript typescript-language-server```
+
+ - To enable LUA formatting install lua-fmt
+   ```sudo npm install -g lua-fmt```
+
+## Available functionalities
+ - Built In LSP Support
+ - Telescope Fuzzy finder
+ - Install preffered LSP using LspInstall command
+   ```LspInstall <language>```
+ - Formatting for files can be added using Format.nvim
+   _Already available support for Prettier (Javascript, Typescript)_
+ - AutoPairs available to close the brackets.
+ - Comment functionality (```Key -> gcc```)
+ - Vim Surround
+ - Completions for LSP
+ - Diagnostics for LSP
+ - Catppuccino theme installed with LSP and NVIMTree integration
+ - Lualine as the status line
+ - NvimTree for File navigation 
