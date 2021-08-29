@@ -65,3 +65,9 @@
 ## 😊 Thank You Note
  Thanks for trying out RokVim ❤️.. Feel free to add your features and PRs.. Lets build a cool IDE.. 
 
+ Heavily Inspired from LunarVim.. Check It Out
+
+ ```
+ https://github.com/LunarVim/LunarVim
+ ```
+
