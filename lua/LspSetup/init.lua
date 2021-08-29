@@ -1,12 +1,13 @@
-require("LspSetup/LspInstallConfig");
-require("LspSetup/Completions");
-require("LspSetup/TreeSitter");
+require("LspSetup/LspInstallConfig")
+require("LspSetup/Completions")
+require("LspSetup/TreeSitter")
 
 local LSP = require("lspconfig")
 local onAttach = require("LspSetup.OnAttachConfig")
 
-require("LspSetup.LSP.LuaLsp")(onAttach, LSP);
-require("LspSetup.LSP.TsServer")(onAttach, LSP);
+--Enable plugins here to get the Lsp diagnosticls
+require("LspSetup.LSP.LuaLsp")(onAttach, LSP)
+require("LspSetup.LSP.TsServer")(onAttach, LSP)
 
 local filetypes = {
   javascript = "eslint",
