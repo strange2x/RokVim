@@ -1,4 +1,4 @@
-# RokVim 🖥️ ⌨️
+# RokVim 🖥️ ⌨️  ⚡
 
  _Simple Neovim Config with built in support for **LSP**, **Formatting** and **Eslint Integration** for Javascript and Typescript **(Other languages also supported)**_
 
@@ -9,7 +9,7 @@
 
    ```https://github.com/neovim/neovim/wiki/Building-Neovim```
 
- - Install Packer.nvim (Package Manager user) **Not Needed if using the script**
+ - Install Packer.nvim (Package Manager user) ⚠️**Not Needed if using the script**
   
    ```
    git clone https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
