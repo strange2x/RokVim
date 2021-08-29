@@ -36,13 +36,11 @@
    sudo npm install -g typescript typescript-language-server\
    ```
 
- - To enable LUA formatting install lua-fmt
+ - To enable LUA formatting install lua-fmt (_**Recommended**_)
 
    ```
    sudo npm install -g lua-fmt
    ```
-   
-   _Recommended_
    
 ## 🔵 Available functionalities
  - Built In LSP Support
