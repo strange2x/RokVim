@@ -15,12 +15,15 @@
    ```bash <(curl -s https://raw.githubusercontent.com/abeeskhan/RokVim/main/install.sh)```
 
  - To Enable diagnostics, you can install diagnostic-languageserver
+
    ```sudo npm install -g diagnostic-languageserver```
 
  - To enable Typescript and Javascript support install typescript and typescript-language-server
+
    ```sudo npm install -g typescript typescript-language-server```
 
  - To enable LUA formatting install lua-fmt
+
    ```sudo npm install -g lua-fmt```
 
 ## Available functionalities
