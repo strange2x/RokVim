@@ -33,6 +33,8 @@
    ```LspInstall <language>```
  - Formatting for files can be added using Format.nvim
    _Already available support for Prettier (Javascript, Typescript)_
+ - AutoFormat on save for Javascript, Typescript, JSON and Lua (_More can be easily added_)
+ - Linting available for Javascript and Typescript (_ESLint_)
  - AutoPairs available to close the brackets.
  - Comment functionality (```Key -> gcc```)
  - Vim Surround
@@ -40,4 +42,9 @@
  - Diagnostics for LSP
  - Catppuccino theme installed with LSP and NVIMTree integration
  - Lualine as the status line
+
+### Thank You Note
+ Thanks for trying out RokVim.. Feel free to add your features and PRs.. Lets build a cool IDE.. 
+
+
  - NvimTree for File navigation 
