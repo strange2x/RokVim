@@ -10,7 +10,11 @@ then
     exit;
 fi
 
-echo "Installing ....";
+echo "Installing Packer";
+
+git clone https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim;
+
+echo "Checking if config exists";
 
 if [[ -d ~/.config/nvim ]]
 then
