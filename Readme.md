@@ -54,6 +54,7 @@
  - Catppuccino theme installed with LSP and NVIMTree integration
  - Lualine as the status line
  - NvimTree for File navigation 
+ 
 
 
 ## 😊 Thank You Note
