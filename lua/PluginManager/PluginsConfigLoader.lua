@@ -20,3 +20,6 @@ require("PluginManager/FormatConfigs")
 
 -- Enable Autopairs
 require("PluginManager/AutoPairsConfigs")
+
+-- Enable GitSigns
+require("PluginManager.GitsignConfigs")
