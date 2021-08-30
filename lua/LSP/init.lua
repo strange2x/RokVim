@@ -1,7 +1,6 @@
 local M = {}
 
 M.config = function(LSP, onAttach)
-  require("LSP.Servers.LuaLsp").attach(onAttach, LSP)
   require("LSP.Servers.Typescript").attach(onAttach, LSP)
   LSP.diagnosticls.setup {
     on_attach = onAttach
