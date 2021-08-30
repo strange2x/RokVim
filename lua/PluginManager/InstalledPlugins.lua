@@ -13,6 +13,7 @@ function InstallMiscPlugins(use)
   use "tpope/vim-commentary"
   use "windwp/nvim-autopairs"
   use {"creativenull/diagnosticls-configs-nvim", requires = {"neovim/nvim-lspconfig"}}
+  use {"lewis6991/gitsigns.nvim", requires = {"nvim-lua/plenary.nvim"}}
 end
 
 function InstallPlugins(use)
@@ -22,7 +23,7 @@ function InstallPlugins(use)
   InstallLSP(use)
   use "Pocco81/Catppuccino.nvim"
   use {"hoob3rt/lualine.nvim", requires = {"kyazdani42/nvim-web-devicons", opt = true}}
-  use "airblade/vim-gitgutter"
+  -- use "airblade/vim-gitgutter"
   use "mhartington/formatter.nvim"
   InstallMiscPlugins(use)
 end
