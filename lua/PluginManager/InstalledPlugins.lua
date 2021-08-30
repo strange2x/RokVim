@@ -11,6 +11,7 @@ end
 function InstallMiscPlugins(use)
   use "tpope/vim-surround"
   use "tpope/vim-commentary"
+  use "tpope/vim-fugitive"
   use "windwp/nvim-autopairs"
   use {"creativenull/diagnosticls-configs-nvim", requires = {"neovim/nvim-lspconfig"}}
   use {"lewis6991/gitsigns.nvim", requires = {"nvim-lua/plenary.nvim"}}

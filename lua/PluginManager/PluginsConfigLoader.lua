@@ -23,3 +23,7 @@ require("PluginManager/AutoPairsConfigs")
 
 -- Enable GitSigns
 require("PluginManager.GitsignConfigs")
+
+-- Enable Git (Fugitive)
+require("KeyboardMappings/FugitiveKeyMappings")
+
