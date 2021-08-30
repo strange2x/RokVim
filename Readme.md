@@ -11,12 +11,6 @@
    ```
    https://github.com/neovim/neovim/wiki/Building-Neovim
    ```
-   
- - Install Packer.nvim (Package Manager user) ⚠️ **Not Needed if using the script**
-  
-   ```
-   git clone https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-   ```
 
  - You can install RokVim by running the following command
 
