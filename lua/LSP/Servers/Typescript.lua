@@ -12,7 +12,7 @@ M.attach = function(onAttach, LSP)
     end
 
     LSP.tsserver.setup {
-      on_attach = function(client)
+      on_attach = function(client, bufnr)
         client.resolved_capabilities.document_formatting = false
         onAttach(client)
       end
