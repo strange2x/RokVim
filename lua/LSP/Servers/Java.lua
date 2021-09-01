@@ -1,10 +1,10 @@
 local M = {}
 
 M.attach = function(onAttach, LSP)
-  if LSP.sumneko_lua then
-    LSP.sumneko_lua.setup {
+  if LSP.java then
+    LSP.java.setup {
       on_attach = function(client)
-        client.resolved_capabilities.document_formatting = false
+        client.resolved_capabilities.document_formatting = true
         onAttach(client)
       end
     }

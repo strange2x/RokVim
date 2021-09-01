@@ -27,4 +27,4 @@ M.setup = function()
   M.config(nvimtreesitter_config)
 end
 
-return M;
+return M

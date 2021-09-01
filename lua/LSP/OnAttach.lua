@@ -1,36 +1,73 @@
-local onAttach = function(client, bufnr)
-  local function buf_set_keymap(...)
-    vim.api.nvim_buf_set_keymap(bufnr, ...)
-  end
-  local function buf_set_option(...)
-    vim.api.nvim_buf_set_option(bufnr, ...)
-  end
+local VIM_MODES = require("CommonVars").VIM_MODES
 
-  -- Enable completion triggered by <c-x><c-o>
-  -- Mappings.
-  local opts = {noremap = true, silent = true}
+local createCustomLspCommands = function()
+  vim.cmd("command! LspDefinition lua vim.lsp.buf.definition()")
+  vim.cmd("command! LspFormat lua vim.lsp.buf.formatting()")
+  vim.cmd("command! LspCodeAction lua vim.lsp.buf.code_action()")
+  vim.cmd("command! LspHover lua vim.lsp.buf.hover()")
+  vim.cmd("command! LspRename lua vim.lsp.buf.rename()")
+  vim.cmd("command! LspOrganizeImports lua lsp_organize_imports()")
+  vim.cmd("command! LspReferences lua vim.lsp.buf.references()")
+  vim.cmd("command! LspTypeDefenitions lua vim.lsp.buf.type_defenition()")
+  vim.cmd("command! LspImplementation lua vim.lsp.buf.implementation()")
+  vim.cmd("command! LspDiagnosticsGoPrevious lua vim.lsp.diagnostic.goto_prev()")
+  vim.cmd("command! LspDiagnosticsGoNext lua vim.lsp.diagnostic.goto_next()")
+  vim.cmd("command! LspDiagnosticsShowLine lua vim.lsp.diagnostic.show_line_diagnostics()")
+  vim.cmd("command! LspSignatureHelp lua vim.lsp.buf.signature_help()")
+end
 
-  -- See `:help vim.lsp.*` for documentation on any of the below functions
-  buf_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-  buf_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-  buf_set_keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-  buf_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-  buf_set_keymap("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
-  buf_set_keymap("n", "<space>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", opts)
-  buf_set_keymap("n", "<space>wr", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", opts)
-  buf_set_keymap("n", "<space>wl", "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>", opts)
-  buf_set_keymap("n", "<space>D", "<cmd>lua vim.lsp.buf.type_definitimn()<CR>", opts)
-  buf_set_keymap("n", "<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-  buf_set_keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-  buf_set_keymap("n", "<space>d", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", opts)
-  buf_set_keymap("n", "[d", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
-  buf_set_keymap("n", "]d", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
-  buf_set_keymap("n", "<space>F", "<cmd>:FormatWrite<CR>", opts)
-  buf_set_keymap("n", "<space>ws", "<cmd>Telescope lsp_workspace_symbols<CR>", opts)
-  buf_set_keymap("n", "<space>ds", "<cmd>Telescope lsp_document_symbols<CR>", opts)
-  buf_set_keymap("n", "<space>ca", "<cmd>Telescope lsp_code_actions<CR>", opts)
-  buf_set_keymap("n", "<space>dd", "<cmd>Telescope lsp_document_diagnostics<CR>", opts)
-  buf_set_keymap("n", "<space>f", "<cmd>Telescope current_buffer_fuzzy_find<CR>", opts)
+local createLspKeymappings = function(BufferMap, BufferNumber, LspKeymaps)
+  local keymapOptions = {silent = true}
+  BufferMap(BufferNumber, VIM_MODES.Normal, LspKeymaps.LspGotoDefinition, "<cmd>LspDefinition<CR>", keymapOptions)
+  BufferMap(BufferNumber, VIM_MODES.Normal, LspKeymaps.LspRename, "<cmd>LspRename<CR>", keymapOptions)
+  BufferMap(BufferNumber, VIM_MODES.Normal, LspKeymaps.LspTypeDefenition, "<cmd>LspTypeDefenitions<CR>", keymapOptions)
+  BufferMap(BufferNumber, VIM_MODES.Normal, LspKeymaps.LspReferences, "<cmd>LspReferences<CR>", keymapOptions)
+  BufferMap(BufferNumber, VIM_MODES.Normal, LspKeymaps.LspHover, "<cmd>LspHover<CR>", keymapOptions)
+  BufferMap(BufferNumber, VIM_MODES.Normal, LspKeymaps.LspOrganizeImports, "<cmd>LspOrganizeImports<CR>", keymapOptions)
+  BufferMap(
+    BufferNumber,
+    VIM_MODES.Normal,
+    LspKeymaps.LspDiagnosticsGoPrevious,
+    "<cmd>LspDiagnosticsGoPrevious<CR>",
+    keymapOptions
+  )
+  BufferMap(
+    BufferNumber,
+    VIM_MODES.Normal,
+    LspKeymaps.LspDiagnosticsGoNext,
+    "<cmd>LspDiagnosticsGoNext<CR>",
+    keymapOptions
+  )
+  BufferMap(BufferNumber, VIM_MODES.Normal, LspKeymaps.LspCodeAction, "<cmd>LspCodeAction<CR>", keymapOptions)
+  BufferMap(
+    BufferNumber,
+    VIM_MODES.Normal,
+    LspKeymaps.LspDiagnosticsShowLine,
+    "<cmd>LspDiagnosticsShowLine<CR>",
+    keymapOptions
+  )
+  BufferMap(BufferNumber, VIM_MODES.Normal, LspKeymaps.LspSignatureHelp, "<cmd>LspSignatureHelp<CR>", keymapOptions)
+end
+
+local enableDocumentFormatting = function(Client)
+  if Client.resolved_capabilities.document_formatting then
+    vim.api.nvim_exec(
+      [[
+            augroup LspAutoCommands
+                autocmd ! * <buffer>
+                autocmd BufWritePost <buffer>
+                LspFormatting
+            augroup END
+        ]],
+      true
+    )
+  end
+end
+
+local onAttach = function(Client, BufferNumber)
+  createCustomLspCommands()
+  createLspKeymappings(vim.api.nvim_buf_set_keymap, BufferNumber, require("LSP.LspKeyMappings"))
+  enableDocumentFormatting(Client)
 end
 
 return onAttach
