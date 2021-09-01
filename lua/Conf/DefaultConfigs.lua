@@ -39,4 +39,4 @@ vim.o.completeopt = "menuone,noselect"
 vim.cmd [[set undodir=$HOME/.undodir]]
 
 -- Loading Default Keymappings
-require('Conf/DefaultKeymaps');
+require("Conf/DefaultKeymaps")

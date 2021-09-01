@@ -2,7 +2,6 @@ local CommonVars = require("CommonVars")
 local M = {}
 
 M.config = function(nvimtree_config)
-  local NvimTree = nvimtree_config.nvim_tree_callback
   vim.g.nvim_tree_side = "left"
   vim.g.nvim_tree_width = 50
   vim.g.nvim_tree_auto_close = 1
@@ -11,6 +10,7 @@ M.config = function(nvimtree_config)
   vim.g.nvim_tree_icon_padding = " "
   vim.g.nvim_tree_highlight_opened_files = 1
   vim.g.nvim_tree_indent_markers = 1
+  vim.g.nvim_tree_ignore = {".git", "node_modules", ".cache"}
 end
 
 M.keymaps = function(map, options, VIM_MODES)

@@ -12,3 +12,7 @@ CommonVars.map(CommonVars.VIM_MODES.Normal, "<leader>,", "<cmd>bp<CR>", CommonVa
 
 -- Closing a buffer
 CommonVars.map(CommonVars.VIM_MODES.Normal, "<leader>q", "<cmd>bd<CR>", CommonVars.options)
+
+-- Resizing vertical split
+CommonVars.map(CommonVars.VIM_MODES.Normal, "<C-A-h>", "<cmd>vertical resize -5<CR>", CommonVars.options)
+CommonVars.map(CommonVars.VIM_MODES.Normal, "<C-A-l>", "<cmd>vertical resize +5<CR>", CommonVars.options)
